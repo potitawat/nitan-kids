@@ -57,6 +57,7 @@
   .story-card:hover{transform:translateY(-6px) rotate(-.5deg);border-color:var(--accent3)}
   .story-card .cover{aspect-ratio:8/5;background:var(--soft)}
   .story-card .cover svg{width:100%;height:100%;display:block}
+  .story-card .cover img{width:100%;height:100%;object-fit:cover;display:block}
   .story-card .info{padding:14px 16px 18px}
   .story-card h3{font-size:1.15rem;line-height:1.4}
   .story-card .meta{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
@@ -92,6 +93,7 @@
     box-shadow:var(--shadow);flex-shrink:0;
   }
   .page-illust svg{width:100%;height:auto;display:block}
+  .page-illust img{width:100%;height:auto;display:block}
   .page-text{
     width:min(720px,100%);margin-top:18px;font-size:clamp(1.05rem,3vw,1.35rem);
     line-height:1.9;text-align:center;padding:0 8px;
@@ -169,6 +171,9 @@ const UI = {
       prev:'Back', next:'Next', end:'The End 🎉', empty:'No stories in this group yet',
       footer:'Made with love, for every little reader 💛', pages:'pages'},
 };
+function pageVisual(p){
+  return p.img ? `<img src="${p.img}" alt="" loading="lazy">` : p.svg;
+}
 let lang = 'th';
 let filter = 'all';
 let current = null, pageIdx = 0;
@@ -197,7 +202,7 @@ function render(){
   if(!list.length){ grid.innerHTML = `<div class="empty">${t.empty}</div>`; return; }
   grid.innerHTML = list.map(s => `
     <div class="story-card" onclick="openStory('${s.id}')">
-      <div class="cover">${s.pages[0].svg}</div>
+      <div class="cover">${pageVisual(s.pages[0])}</div>
       <div class="info">
         <h3>${s.title[lang]}</h3>
         <div class="meta">
@@ -226,7 +231,7 @@ function renderPage(){
   const p = current.pages[pageIdx];
   document.getElementById('reader-title').textContent = current.title[lang];
   document.getElementById('reader-lang').textContent = lang==='th'?'EN':'ไทย';
-  document.getElementById('page-illust').innerHTML = p.svg;
+  document.getElementById('page-illust').innerHTML = pageVisual(p);
   document.getElementById('page-text').textContent = p[lang];
   document.getElementById('page-dots').textContent = `${pageIdx+1} / ${current.pages.length}`;
   document.getElementById('btn-prev').disabled = pageIdx===0;
