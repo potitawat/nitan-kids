@@ -93,7 +93,9 @@
     box-shadow:var(--shadow);flex-shrink:0;
   }
   .page-illust svg{width:100%;height:auto;display:block}
-  .page-illust img{display:block;margin:0 auto;max-width:100%;height:auto;max-height:60vh}
+  .page-illust img{display:block;margin:0 auto;max-width:100%;height:auto;max-height:60vh;border-radius:24px}
+  .page-illust:has(img){background:transparent;box-shadow:none;border-radius:0;display:flex;justify-content:center}
+  .page-illust:has(img) img{box-shadow:var(--shadow);background:#fff}
   .page-text{
     width:min(720px,100%);margin-top:18px;font-size:clamp(1.05rem,3vw,1.35rem);
     line-height:1.9;text-align:center;padding:0 8px;
