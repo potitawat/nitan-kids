@@ -93,7 +93,7 @@
     box-shadow:var(--shadow);flex-shrink:0;
   }
   .page-illust svg{width:100%;height:auto;display:block}
-  .page-illust img{width:100%;height:auto;display:block}
+  .page-illust img{display:block;margin:0 auto;max-width:100%;height:auto;max-height:60vh}
   .page-text{
     width:min(720px,100%);margin-top:18px;font-size:clamp(1.05rem,3vw,1.35rem);
     line-height:1.9;text-align:center;padding:0 8px;
@@ -114,6 +114,22 @@
   @media (max-width:520px){
     .lang-toggle{top:10px;right:10px}
     header{padding-top:56px}
+  }
+  /* ---------- tablet portrait (iPad) : big picture-book layout ---------- */
+  @media (orientation: portrait) and (min-width: 600px){
+    .reader-top{padding:16px 20px}
+    .reader-top h2{font-size:1.55rem}
+    .btn-round{width:54px;height:54px;font-size:1.45rem}
+    .page-area{padding:30px 28px 130px}
+    .page-illust{width:min(880px,100%);border-radius:30px}
+    .page-illust img{max-height:56vh}
+    .page-text{
+      width:min(820px,100%);margin-top:26px;
+      font-size:1.7rem;line-height:2.05;
+    }
+    .reader-nav{padding:18px 30px}
+    .nav-btn{font-size:1.35rem;padding:15px 40px;border-radius:999px}
+    .page-dots{font-size:1.2rem}
   }
 </style>
 </head>
@@ -256,6 +272,22 @@ document.addEventListener('keydown', e=>{
   if(e.key==='ArrowLeft') turnPage(-1);
   if(e.key==='Escape') closeReader();
 });
+/* swipe left/right to turn pages (iPad / touch) */
+(function(){
+  const area = document.querySelector('.page-area');
+  let sx=0, sy=0, st=0;
+  area.addEventListener('touchstart', e=>{
+    sx=e.touches[0].clientX; sy=e.touches[0].clientY; st=Date.now();
+  }, {passive:true});
+  area.addEventListener('touchend', e=>{
+    if(!current) return;
+    const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy;
+    if(Date.now()-st<600 && Math.abs(dx)>60 && Math.abs(dx)>Math.abs(dy)*1.5){
+      if(dx<0){ if(pageIdx===current.pages.length-1) closeReader(); else turnPage(1); }
+      else turnPage(-1);
+    }
+  }, {passive:true});
+})();
 render();
 </script>
 </body>
