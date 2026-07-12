@@ -120,6 +120,44 @@ const STORIES = [
     en: "The lesson of this story — A father's love is rarely spoken in words. It hides in every weary step, every drop of sweat, and every little thing he does for us each day. A good role model doesn't need to teach with a loud voice; leaving footprints for us to follow is enough... Today, don't forget to hug your dad, or thank the person whose footsteps have guided you all along.",
     img: "images/big-shoes-6.jpg"
   }
+]},
+
+/* ============ 4. สวัสดีเพื่อนรัก (3-6) ============ */
+{
+  id: "hello-friend",
+  age: "3-6",
+  title: { th: "สวัสดีเพื่อนรัก", en: "Hello, Dear Friend" },
+  pages: [
+  {
+    th: "ในบ้านหลังเล็กสีครีม มีเพื่อนรักสองตัวอาศัยอยู่ด้วยกัน \"โมจิ\" ลูกหมาสีน้ำตาลทอง ผู้ร่าเริงเสียงดัง หางกระดิกได้ทั้งวัน กับ \"มะลิ\" แมวน้อยสีขาว ผู้เงียบสงบ ชอบนอนขดตากแดดอุ่น ๆ ข้างหน้าต่าง ทั้งสองต่างกันราวฟ้ากับดิน แต่ทุกเช้าโมจิจะวิ่งมาทักทายเสียงใส \"สวัสดีเพื่อนรัก!\"",
+    en: "In a little cream-colored house lived two dear friends. Mochi, a golden-brown puppy — cheerful, loud, tail wagging all day long. And Mali, a little white cat — calm and quiet, who loved curling up in the warm sun by the window. The two were as different as sky and earth, but every morning Mochi would run over and call out brightly, \"Hello, dear friend!\"",
+    img: "images/hello-friend-1.jpg"
+  },
+  {
+    th: "โมจิชอบเล่นตึงตัง วิ่งไล่ลูกบอล เห่าเสียงดังอย่างสนุกสนาน วันหนึ่งขณะที่มะลิกำลังหลับสบาย โมจิก็กระโดดตูม! ลงข้าง ๆ อยากชวนเล่น มะลิสะดุ้งตื่น ขนพองฟู \"ฟู่ว์! ทำไมเธอต้องเสียงดังแบบนี้ด้วย!\" โมจิหูตก \"ก็เธอไม่เคยอยากเล่นกับฉันเลย เธอไม่รักฉันใช่ไหม\" ทั้งสองหันหลังให้กัน ไม่พูดกันทั้งวัน",
+    en: "Mochi loved to play loudly — chasing balls and barking with joy. One day, while Mali was sleeping peacefully, Mochi jumped — THUMP! — right beside her, hoping to play. Mali woke with a start, her fur puffed up. \"Hisss! Why must you be so loud?!\" Mochi's ears drooped. \"You never want to play with me. You don't love me, do you?\" They turned their backs on each other and didn't speak all day.",
+    img: "images/hello-friend-2.jpg"
+  },
+  {
+    th: "คืนนั้นฝนตกหนัก ฟ้าร้องครืนครั่น เปรี้ยง! โมจิกลัวจนตัวสั่น ไปหลบมุมห้องเงียบ ๆ ทั้งที่ยังงอนกันอยู่ มะลิเห็นเพื่อนตัวสั่น เธอค่อย ๆ ย่องเข้ามาใกล้ แล้วนอนลงข้าง ๆ เอาหางฟู ๆ อุ่น ๆ โอบคลุมตัวโมจิไว้ ไม่พูดอะไรสักคำ... แต่คืนนั้นโมจิหลับสบายที่สุดเลย",
+    en: "That night, heavy rain fell and thunder crashed — BOOM! Mochi trembled with fear and hid quietly in the corner. Even though they were still upset with each other, when Mali saw her friend shaking, she tiptoed close, lay down beside him, and wrapped her warm fluffy tail around him. She didn't say a single word... but that night, Mochi slept better than ever.",
+    img: "images/hello-friend-3.jpg"
+  },
+  {
+    th: "เช้าวันใหม่ โมจิตื่นมาพบว่ามะลิยังนอนอยู่ข้าง ๆ เขาเข้าใจแล้วว่า มะลิรักเขาในแบบของมะลิ — รักที่เงียบ แต่อบอุ่นเหมือนแสงแดด \"ขอโทษนะที่เสียงดัง\" โมจิกระซิบเบา ๆ มะลิถูหัวกับแก้มโมจิ \"ขอโทษเหมือนกัน ที่ไม่เคยบอกว่าฉันก็รักเธอ\" จากวันนั้น โมจิเรียนรู้ที่จะเล่นเบา ๆ และมะลิก็เรียนรู้ที่จะกระดิกหางทักทายบ้าง",
+    en: "The next morning, Mochi woke to find Mali still sleeping beside him. Now he understood — Mali loved him in her own way: a quiet love, warm as sunshine. \"I'm sorry I was so loud,\" Mochi whispered softly. Mali rubbed her head against his cheek. \"I'm sorry too, for never telling you that I love you.\" From that day on, Mochi learned to play gently, and Mali learned to wag her tail hello.",
+    img: "images/hello-friend-4.jpg"
+  },
+  {
+    th: "ตั้งแต่นั้นมา ทุกเย็นทั้งสองจะนั่งเคียงกันบนระเบียง ดูพระอาทิตย์ตกสีส้มทอง โมจิไม่ต้องเห่าเสียงดัง มะลิไม่ต้องพูดอะไร เพียงแค่นั่งชิด ๆ กัน ก็รู้ว่ารักกันมากแค่ไหน และทุกเช้า เสียงทักทายใส ๆ ก็ยังดังขึ้นเหมือนเดิม พร้อมเสียงตอบเบา ๆ ว่า \"เหมียว~ สวัสดีเพื่อนรัก\"",
+    en: "From then on, every evening the two sat side by side on the porch, watching the golden-orange sunset. Mochi didn't need to bark loudly, and Mali didn't need to say a word — just sitting close together, they knew how much they loved each other. And every morning, the bright greeting still rang out as always, answered by a soft little \"Meow~ hello, dear friend.\"",
+    img: "images/hello-friend-5.jpg"
+  },
+  {
+    th: "ข้อคิดจากเรื่องนี้ — เพื่อนรักไม่จำเป็นต้องเหมือนกัน บางคนแสดงความรักด้วยเสียงหัวเราะดัง ๆ บางคนแสดงความรักด้วยความเงียบที่อ่อนโยน ความแตกต่างไม่ใช่กำแพงของความรัก ขอเพียงเราเรียนรู้ \"ภาษาหัวใจ\" ของกันและกัน... แล้วเราจะอยู่ด้วยกันได้อย่างมีความสุข ไม่ว่าจะต่างกันสักแค่ไหนก็ตาม",
+    en: "The lesson of this story — Dear friends don't have to be the same. Some show love with loud laughter; some show love with gentle quietness. Being different is never a wall against love. If only we learn each other's \"language of the heart\"... we can live happily together, no matter how different we may be.",
+    img: "images/hello-friend-6.jpg"
+  }
 ]}
 
 ];
